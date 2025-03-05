@@ -224,7 +224,7 @@ export const parseUrl = (
 };
 
 export function normalizeHref(url?: string, cleanUrls = false) {
-  if (!url) {
+  if (!url || url === '/index' || url === '/') {
     return '/';
   }
   if (isExternalUrl(url)) {
